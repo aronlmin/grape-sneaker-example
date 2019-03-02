@@ -13,7 +13,7 @@ module BUNNY
     ## create a que on the channel
     q = ch.queue(channel.to_s, durable: true, auto_delete: false)
 
-    ## publish a message
+    ## publish a message, converting the object to a JSON string
     q.publish(object.to_json, routing_key: q.name)
 
     ## close the connection
