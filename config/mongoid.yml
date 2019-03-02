@@ -1,0 +1,17 @@
+development:
+  clients:
+    default:
+      database: <%= ENV['DB_NAME'] %>
+      hosts:
+        - <%= ENV['DB_HOST'] %>
+      use_utc: true
+production:
+  clients:
+    default:
+      database: <%= ENV['DB_NAME'] %>
+      hosts:
+        - <%= ENV['DB_HOST'] %>
+      use_utc: true
+      options:
+        user: <%= ENV['DB_USER'] %>
+        password: <%= ENV['DB_PASSWORD'] %>
